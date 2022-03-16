@@ -25,7 +25,7 @@
 
  Use terminal and go to project directory
  Execute the below command
-  ```php artisan test```
+  ```php artisan test --testsuite=Feature```
 
 ## Reference
 
