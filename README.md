@@ -9,17 +9,17 @@
 
 ## Routing
  Store and update object - POST method
-- object 
+- /object 
 ```{ "keName": "value"}```
 
  Get object - GET method
- - object/{keyName}
+ - /object/{keyName}
 
  Get object with timestamp - GET method
- - object/{keyName}?timestamp={unixTimestamp}
+ - /object/{keyName}?timestamp={unixTimestamp}
 
  Get all records  - GET method
-  - object/get_all_records
+  - /object/get_all_records
 
 
 ## Unit test
