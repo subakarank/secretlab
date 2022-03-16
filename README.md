@@ -40,9 +40,9 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability to Subakaran via [subakaranmca@gmail.com](mailto:subakaranmca@gmail.com). 
+If you discover a security vulnerability then email to Subakaran via [subakaranmca@gmail.com](mailto:subakaranmca@gmail.com). 
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-API is only allowed to use and modify Author and SecretLab. Not allowed to use and modify by anyone
+API is only allowed to use and modify by Author and SecretLab. Not allowed to use and modify by anyone.
