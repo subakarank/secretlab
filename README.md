@@ -1,11 +1,20 @@
 
 ## Secret Lab
 
-## Tech
+## Tech (lamp stack)
  - Laravel 8
  - PHP 7.3 and Above
  - MySQL
+ - Apache
 
+## Install
+- clone the repo
+- save as .env.example as .env
+- update the required configuration for .env file
+- ```cd``` to the project directory
+- execute ```composer install```
+- execute ```php artisan key:generate```
+- execute ```php artisan migrate```
 
 ## Routing
  Store and update object - POST method
