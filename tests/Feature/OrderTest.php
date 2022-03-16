@@ -209,7 +209,7 @@ class OrderTest extends TestCase
 
     public function test_get_all_records_route()
     {
-        $response = $this->get('object/get_all_record');
+        $response = $this->get('object/get_all_records');
         $response->assertStatus(200);
     }
 }
