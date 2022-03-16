@@ -10,6 +10,7 @@
 ## Routing
  Store and update object - POST method
 - object 
+```{ "keName": "value"}```
 
  Get object - GET method
  - object/{keyName}
