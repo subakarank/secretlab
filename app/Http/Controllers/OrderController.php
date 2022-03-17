@@ -33,14 +33,12 @@ class OrderController extends Controller
     public function store(OrderPostRequest $orderPostRequest)
     {
         $data = $orderPostRequest->only('name', 'value', 'updated_at');
-        $order = Order::updateOrCreate(
+        $order = Order::Create(
             [
-                'name' => $data['name']
-            ], 
-            [
+                'name' => $data['name'],
                 'value' => $data['value'],
                 'updated_at' => $data['updated_at']
-        ]);
+            ]);
         return new OrderResource($order);
     }
 
@@ -60,10 +58,11 @@ class OrderController extends Controller
         // check request has timestamp or not and if have the apply for the filter
         if ( $request->has('timestamp')) {
             $order = $order->where('updated_at', $request->get('timestamp'));
-        }
-        $order = $order->first();
-        return ($order) ? new OrderResource($order): 
+            $order = $order->first();
+            return ($order) ? new OrderResource($order) :
                 $this->error(['message' => 'No value is found for the given key and timestamp'], Response::HTTP_BAD_REQUEST);
-        
+        }
+        $order = $order->latest('updated_at')->first();
+        return new OrderResource($order);
     }
 }

@@ -107,21 +107,6 @@ class OrderTest extends TestCase
     }
 
     /**
-     * Testing for store - Update data with valid input 
-     * It is for existing key
-     * @route object/
-     */
-    public function test_update_value_for_existing_key()
-    {
-        $response = $this->postJson('object', ["secretLabKey" => "Make it Happen!"]);
-        $response
-            ->assertStatus(201)
-            ->assertJson([
-                'data' => ["secretLabKey" => "Make it Happen!"]
-            ]);
-    }
-
-    /**
      * Testing for get key object route method
      * Required method is GET
      * @route object/{key}
@@ -137,7 +122,7 @@ class OrderTest extends TestCase
      * @route object/{key}
      */
 
-    public function test_get_value_for_existing_key()
+    public function test_get_value_for_existing_key_latest_value()
     {
         $this->postJson('object', ["secretLabKey" => "Make it Happen!"]);
         $response = $this->get('object/secretLabKey');
